@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IntegerListRecordReader extends RecordReader<LongWritable, NullWritable> {
-  private static final Logger LOG = LoggerFactory.getLogger(IntegerListInputFormat.class);
+  private static final Logger LOG = LoggerFactory.getLogger(IntegerListRecordReader.class);
 
   // Avoid recreating the object each time getCurrentKey is called.
   protected LongWritable key_ = new LongWritable();

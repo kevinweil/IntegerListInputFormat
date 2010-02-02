@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IntegerListInputSplit extends InputSplit implements Writable {
-  private static final Logger LOG = LoggerFactory.getLogger(IntegerListInputFormat.class);
+  private static final Logger LOG = LoggerFactory.getLogger(IntegerListInputSplit.class);
 
   protected long min_;
   protected long max_;

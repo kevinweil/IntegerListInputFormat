@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.collect.Lists;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.mapreduce.InputFormat;
@@ -37,7 +38,7 @@ public class IntegerListInputFormat extends InputFormat<LongWritable, NullWritab
   @Override
   public List<InputSplit> getSplits(JobContext jobContext)
       throws IOException, InterruptedException {
-    List<InputSplit> splits = new ArrayList<InputSplit>();
+    List<InputSplit> splits = Lists.newArrayList();
     // Divide and round up.
     long valuesPerSplit = 1 + (max_ - min_) / numSplits_;
     LOG.info("IntegerListInputFormat creating about " + numSplits_ + " splits for range [" +
